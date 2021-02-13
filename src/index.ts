@@ -1,6 +1,4 @@
-import express from 'express';
-
-const app = express();
+const app = require('express')();
 
 app.get('/api', (req, res) => {
   const itemId = 'something';
@@ -19,4 +17,4 @@ app.get('/api/item/:slug', (req, res) => {
   res.end(`Item: ${slug}`);
 });
 
-export default app;
+module.exports = app;
