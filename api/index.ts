@@ -25,7 +25,11 @@ app.get('/api/sum/:num1/:num2', (req, res) => {
 
   const result = sum(Number(num1), Number(num2));
 
-  res.end(`${num1} + ${num2} = ${result}`);
+  res.json({
+    'Numero 1': num1,
+    'Numero 2': num2,
+    'Resultado da Soma': result,
+  });
 });
 
 export default app;
