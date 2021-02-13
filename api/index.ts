@@ -1,4 +1,6 @@
-const app = require('express')();
+import express from 'express';
+
+const app = express();
 
 app.get('/api', (req, res) => {
   const itemId = 'something';
@@ -8,7 +10,7 @@ app.get('/api', (req, res) => {
   res.end(`Hello! Go to item: <a href="qwe">${path}</a>`);
 });
 
-app.get('/test', (req, res) => {
+app.get('/api/test', (req, res) => {
   res.end(`Works :D`);
 });
 
@@ -17,4 +19,4 @@ app.get('/api/item/:slug', (req, res) => {
   res.end(`Item: ${slug}`);
 });
 
-module.exports = app;
+export default app;
