@@ -4,7 +4,7 @@ app.get('/api', (req, res) => {
   const path = `/api/item/qwe`;
   res.setHeader('Content-Type', 'text/html');
   res.setHeader('Cache-Control', 's-max-age=1, stale-while-revalidate');
-  res.end(`Hello! Go to item: <a href="qwe">qwe</a>`);
+  res.end(`Hello! Go to item: <a href="/api/item/qwe">/api/item/qwe</a>`);
 });
 
 app.get('/test', (req, res) => {
